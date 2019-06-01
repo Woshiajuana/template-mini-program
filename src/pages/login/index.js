@@ -12,11 +12,5 @@ WowPage({
     data: {
         title: '登录'
     },
-    onShow () {
-        console.log(this.wow$)
-        console.log('page => ', this.data.text)
-        this.setData({text: 2});
-        console.log('page => ', this.data.text)
-    }
 });
 
