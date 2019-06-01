@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="wrap">
+
+    <view class="inner" hidden="{{isLoading}}">
+
+        <text>测试</text>
+    </view>
+    <loading hidden="{{!isLoading}}">加载中</loading>
+</view>

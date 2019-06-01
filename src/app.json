@@ -1,0 +1,17 @@
+{
+    "pages": [
+        "pages/login/index",
+        "pages/text/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#11b9ea",
+        "navigationBarTitleText": "铂金行业中心微管理",
+        "navigationBarTextStyle": "white"
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    }
+}

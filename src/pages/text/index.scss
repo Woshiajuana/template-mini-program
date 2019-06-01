@@ -1,0 +1,67 @@
+@import '../../assets/scss/define';
+
+page{
+    @extend %h100;
+    background-color: #fff;
+}
+.inner,
+.wrap{
+    @extend %df;
+    @extend %fdc;
+    @extend %aic;
+    @extend %oh;
+}
+.logo{
+    margin-top: j(60);
+    width: j(200);
+    height: j(230);
+}
+.title{
+    font-size: f(60);
+    color: #000;
+    margin-top: j(45);
+}
+.form{
+    @extend %df;
+    @extend %fdc;
+    width: j(800);
+    margin-top: j(60);
+}
+.input-placeholder{
+    color: #ccc;
+}
+.input-box{
+    @extend %w100;
+    height: j(100);
+    margin-top: j(40);
+    border-bottom: 1px solid #dedede;
+    input{
+        @extend %db;
+        @extend %w100;
+        @extend %h100;
+        font-size: f(40);
+        min-height: j(100);
+        line-height: j(100);
+        background-color: transparent;
+        border: none;
+    }
+}
+.button{
+    @extend %df;
+    @extend %aic;
+    @extend %jcc;
+    @extend %w100;
+    font-size: f(40);
+    height: j(110);
+    margin-top: j(80);
+    background-color: #11b4e6;
+    color: #fff;
+}
+.button:active{
+    background-color: #1aa2e6;
+}
+.prompt{
+    margin-top: j(80);
+    font-size: f(28);
+    color: #999;
+}

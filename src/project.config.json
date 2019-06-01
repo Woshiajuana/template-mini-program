@@ -1,0 +1,40 @@
+{
+    "description": "项目配置文件",
+    "packOptions": {
+        "ignore": []
+    },
+    "setting": {
+        "urlCheck": true,
+        "es6": true,
+        "postcss": true,
+        "minified": true,
+        "newFeature": true,
+        "autoAudits": false
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.6.4",
+    "appid": "wx2aa0f3c0b7a18359",
+    "projectname": "%E9%93%82%E9%87%91%E8%A1%8C%E4%B8%9A%E4%B8%AD%E5%BF%83%E5%BE%AE%E7%AE%A1%E7%90%86",
+    "debugOptions": {
+        "hidedInDevtools": []
+    },
+    "isGameTourist": false,
+    "condition": {
+        "search": {
+            "current": -1,
+            "list": []
+        },
+        "conversation": {
+            "current": -1,
+            "list": []
+        },
+        "game": {
+            "currentL": -1,
+            "list": []
+        },
+        "miniprogram": {
+            "current": -1,
+            "list": []
+        }
+    }
+}
