@@ -64,6 +64,7 @@ const config = {
             'mixins': path.resolve(__dirname, '../src/mixins/'),
             'tasks': path.resolve(__dirname, '../src/tasks/'),
             'source': path.resolve(__dirname, '../source/'),
+            'cmdConfig': path.resolve(__dirname, '../cmd/config'),
         }
     },
     module: {
