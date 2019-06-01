@@ -12,6 +12,9 @@ WowPage({
     data: {
         hello: 'Hello World'
     },
+    onLoad () {
+        console.log(this.wow$)
+    },
     handleLogin () {
         this.wow$.plugins.router.push('login_index');
     },
