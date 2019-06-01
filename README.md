@@ -1,4 +1,4 @@
-# wow-wx-example
+# template-wechat
 
 > Wechat Small program Build
 
