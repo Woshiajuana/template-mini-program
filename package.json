@@ -4,11 +4,11 @@
   "description": "webpack building multiple page projects",
   "main": "index.js",
   "scripts": {
-    "dev": "node cmd -d dist&&node cmd -p&&node cmd -i -r BD&&webpack --watch --config ./build/webpack.dev.config.js",
-    "test": "node cmd -d dist&&node cmd -p&&node cmd -i -r CS&&webpack --watch --config ./build/webpack.dev.config.js",
-    "build": "node cmd -d dist&&node cmd -p&&node cmd -i -r SC&&webpack --watch --config ./build/webpack.prod.config.js",
+    "dev": "node cmd -d dist -i :cmd/config -r BD -p home_index&&webpack --watch --config ./build/webpack.config.js",
+    "test": "node cmd -d dist -i :cmd/config -r CS -p home_index&&webpack --watch --config ./build/webpack.config.js",
+    "build": "node cmd -d dist -i :cmd/config -r SC -p home_index&&webpack --watch --config ./build/webpack.config.js",
     "clear": "node cmd -d dist",
-    "router": "node cmd -p",
+    "router": "node cmd -p home_index",
     "serve": "serve -p 10011"
   },
   "repository": {
@@ -48,7 +48,7 @@
     "webpack": "^3.10.0",
     "wow-cmd": "0.0.17",
     "wow-cool": "0.0.3",
-    "wow-wx": "0.0.2",
+    "wow-wx": "0.0.3",
     "wxapp-webpack-plugin": "^0.18.0"
   },
   "browserslist": [
