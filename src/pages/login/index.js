@@ -7,10 +7,10 @@ import WowPage                      from 'wow-wx/lib/page'
 
 WowPage({
     mixins: [
-        WowPage.wow$.mixins.text,
+        WowPage.wow$.mixins.version,
     ],
     data: {
-        xx: 11
+        title: '登录'
     },
     onShow () {
         console.log(this.wow$)

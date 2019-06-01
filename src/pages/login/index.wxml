@@ -1,11 +1,6 @@
 <!--index.wxml-->
 <view class="wrap">
-    <image src="../../assets/images/logo.png"></image>
-    <text>{{hello}}</text>
-    <button
-        bindtap="handleLogin"
-        class="button"
-    >去登录</button>
+    <text>{{title}}</text>
     <view class="null"></view>
     <text class="version">{{version}}</text>
 </view>
