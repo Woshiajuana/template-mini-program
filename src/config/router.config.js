@@ -1,4 +1,4 @@
 export default {
-    "login_index": "/pages/login/index",
-    "text_index": "/pages/text/index"
+    "home_index": "/pages/home/index",
+    "login_index": "/pages/login/index"
 }

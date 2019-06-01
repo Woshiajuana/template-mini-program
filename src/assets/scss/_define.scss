@@ -1,9 +1,9 @@
 @function j($px) {
-    @return $px * 0.4rpx;
+    @return $px * 1rpx;
 }
 
 @function f($px) {
-    @return $px * 0.45rpx;
+    @return $px * 1rpx;
 }
 
 %bg{
