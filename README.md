@@ -22,7 +22,7 @@ project
 |   ├── delete.cmd.js                       // 清除某个目录下文件任务模版
 |   ├── index.js                            // 命令主入口
 |   ├── ip.cmd.js                           // 获取设置IP任务模版
-|   ├── page.cmd.js                         // 生成router.config.js以及app.json任务模版
+|   ├── page1.cmd.js                         // 生成router.config.js以及app.json任务模版
 |   ├── release.cmd.js                      // 发布任务模版
 ├── config                                  // 配置目录
 |   ├── index.js
