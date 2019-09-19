@@ -23,19 +23,13 @@ const handle = function (e) {
 
 export default {
     bindInput (event) {
-        let {
-            detail,
-            currentTarget,
-        } = event;
-        let {
-            value,
-        } = detail;
-        let {
-            item,
-        } = currentTarget.dataset;
+        let { detail, currentTarget } = event;
+        let { item, value } = currentTarget.dataset;
+        if (typeof value === 'undefined') value = detail.value;
         this.setData({
             [`${item.key}.value`]: value,
         });
+        this.inputCallback && this.inputCallback(item, value);
     },
     bindTap: handle,
     bindChange: handle,

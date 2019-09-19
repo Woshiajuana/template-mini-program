@@ -1,11 +1,14 @@
 
+function filterYear(curTime) {
+    return curTime ? curTime.substring(0, 4) : '';
+}
 
-function filterProductBases(value, ID) {
-    for (var i = 0; i < value.length; i++) {
-        if (value[i].ID === ID)
-            return true;
-    }
-    return false;
+function filterMonthZh(curTime) {
+    return curTime ? ['', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'][+curTime.substring(5, 7)] : '';
+}
+
+function filterMonth(curTime) {
+    return curTime ? curTime.substring(5, 7) : '';
 }
 
 
@@ -46,37 +49,19 @@ function formatData (timestamp,format){
     return format;
 }
 
-
-function filterLastPlanTime (date) {
+function filterTime (date) {
     if (!date) return '--/--/--';
     date = date.replace(getRegExp("[^0-9]", "ig"), '');
     return formatData(date, 'yyyy-MM-dd');
 }
-
-function filterStoreButtonShow (item, user, butKey) {
-    var StoreStatus = item.StoreStatus;
-    var Level = user.Level;
-    if (Level === 'city') {
-        if (StoreStatus === 1 || StoreStatus === 2)
-            return butKey === 'see';
-        return butKey === 'update';
-    } else if (Level === 'region') {
-        if (StoreStatus === 1)
-            return butKey === 'examine';
-        return butKey === 'examined';
-    } else if (Level === 'root') {
-        return butKey === 'see' || butKey === 'IsDele' || butKey === 'seePatrol';
-    }
-}
-
-function filterLastPlanNum(num) {
-    if (!num) num = 0;
-    return '已通过巡店'+ num +'次';
+function filterSugar (value) {
+    return value ? value.toFixed(1) : 0;
 }
 
 module.exports = {
-    filterLastPlanNum: filterLastPlanNum,
-    filterStoreButtonShow: filterStoreButtonShow,
-    filterProductBases: filterProductBases,
-    filterLastPlanTime: filterLastPlanTime
+    filterSugar: filterSugar,
+    filterTime: filterTime,
+    filterYear: filterYear,
+    filterMonthZh: filterMonthZh,
+    filterMonth: filterMonth,
 };

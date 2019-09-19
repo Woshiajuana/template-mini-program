@@ -1,8 +1,14 @@
-import Modal from 'plugins/modal.plugin'
+import Modal from 'wow-wx/plugins/modal.plugin'
 
 Promise.prototype.toast = function () {
     return this.catch(err => {
         Modal.toast(err);
+    });
+};
+
+Promise.prototype.null = function () {
+    return this.catch(err => {
+        console.log(err);
     });
 };
 

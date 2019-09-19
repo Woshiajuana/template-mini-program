@@ -1,14 +1,15 @@
 
+// import '../utils/es6-promise.util'
 import EnvConfig                from 'config/env.config'
 import ApiConfig                from 'config/api.config'
-import Modal                    from 'plugins/modal.plugin'
-import Auth                     from 'plugins/auth.plugin'
-import Loading                  from 'plugins/loading.plugin'
-import Router                   from 'plugins/router.plugin'
+import Modal                    from 'wow-wx/plugins/modal.plugin'
+import Auth                     from 'wow-wx/plugins/auth.plugin'
+import Loading                  from 'wow-wx/plugins/loading.plugin'
+import Router                   from 'wow-wx/plugins/router.plugin'
 
 const DEFAULT = {
     method: 'POST',
-    useOpenId: true,
+    useUserId: true,
     data: {},
     useAuth: true,
     useUpLoad: false,
@@ -18,7 +19,7 @@ class Http {
         let options = Object.assign({}, DEFAULT, opt);
         this.method = options.method.toLocaleUpperCase();
         this.data = data;
-        this.useOpenId = options.useOpenId;
+        this.useUserId = options.useUserId;
         this.useAuth = options.useAuth;
         this.useUpLoad = options.useUpLoad;
         this.url = EnvConfig.API_URL + api;
@@ -30,13 +31,14 @@ class Http {
             Auth.getToken().then((res) => {
                 let {
                     AccessToken,
-                    OpenId,
+                    UserID,
                 } = res;
-                this.useOpenId && (this.data.OpenId = OpenId);
+                this.useUserId && (this.data.UserId = UserID);
+                // this.useUserId && (this.data.Id = UserID);
                 this.useAuth && AccessToken && (this.url = `${this.url}?access_token=${AccessToken}`);
             }).catch(() => {}).finally(() => {
                 this._log('请求参数', this.data);
-                if (this.useAuth && !this.data.OpenId) {
+                if (this.useAuth && !this.data.UserId) {
                     return Router.root('login_index', {}, true);
                 }
                 let key = 'request';
@@ -49,7 +51,7 @@ class Http {
                     data = {
                         ...this.data,
                         formData: {
-                            OpenId: this.data.OpenId,
+                            UserId: this.data.UserId,
                         },
                         header: {
                             "Content-Type": "multipart/form-data"

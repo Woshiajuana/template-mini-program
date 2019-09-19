@@ -1,5 +1,5 @@
 
-import Modal                from 'plugins/modal.plugin'
+import Modal                from 'wow-wx/plugins/modal.plugin'
 import Each                 from 'utils/each.util'
 import Type                 from 'utils/type.util'
 
