@@ -1,0 +1,5 @@
+
+<view class="wrap" bindtap="jumpPageOrFireFn" data-url="module_home_index" data-params="{{ {x:2} }}">
+    <text>测试分包组件</text>
+</view>
+

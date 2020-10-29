@@ -1,0 +1,17 @@
+
+<view class="title">
+    <text>WOW-WX</text>
+</view>
+
+<view class="operate">
+    <button
+        class="operate-button cancel"
+        bindtap="routerPop"
+    >拒绝</button>
+    <button
+        class="operate-button sure"
+        open-type="getUserInfo"
+        bindgetuserinfo="handleGetUser"
+    >登录</button>
+</view>
+

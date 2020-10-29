@@ -1,9 +1,10 @@
-@function j($px) {
-    @return $px * 1rpx;
-}
+@import "skin";
 
-@function f($px) {
-    @return $px * 1rpx;
+@function j($px, $r: 2) {
+    @if($px == 1) {
+        @return $px * 1rpx;
+    }
+    @return $px * $r * 1rpx;
 }
 
 %boxs{
@@ -78,6 +79,13 @@
     justify-content: space-between;
 }
 
+%jce{
+    -webkit-box-pack: flex-end;
+    -ms-flex-pack: flex-end;
+    justify-content: flex-end;
+}
+
+
 %fdc{
     -webkit-box-orient:vertical;
     -webkit-box-direction:normal;
@@ -91,6 +99,11 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+}
+%aie{
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
 }
 
 %bsb{
@@ -286,6 +299,19 @@
     white-space: nowrap;
 }
 
+%br50{
+    border-radius: 50%;
+}
+
+@mixin twno($n){
+    word-break: break-all;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $n;
+    -webkit-box-orient: vertical;
+}
+
 @mixin rounded($radius){
     -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -320,11 +346,26 @@
     transform: $translate3d;
 }
 
+@mixin tfo($x, $y) {
+    -webkit-transform-origin: $x $y;
+    -moz-transform-origin: $x $y;
+    -ms-transform-origin: $x $y;
+    -o-transform-origin: $x $y;
+    transform-origin: $x $y;
+}
+
 @mixin tst($sty,$time){
     -webkit-transition: $sty $time;
     -moz-transition: $sty $time;
     -o-transition: $sty $time;
     transition: $sty $time;
+}
+
+@mixin tstd($sty,$time,$dey){
+    -webkit-transition: $sty $time $dey;
+    -moz-transition: $sty $time $dey;
+    -o-transition: $sty $time $dey;
+    transition: $sty $time $dey;
 }
 
 @mixin tst2($sty,$time,$sty2,$time2){
@@ -340,3 +381,57 @@
     -o-box-shadow: $x $y $m $n $rgba;
     box-shadow: $x $y $m $n $rgba;
 }
+
+%bw05{
+    @extend %pr;
+    &:before{
+        @extend %pa;
+        @extend %t0;
+        @extend %l0;
+        @extend %bsb;
+        @include tft(scale(0.5, 0.5));
+        @include tfo(0, 0);
+        z-index: 0;
+        content: '';
+        width: 200%;
+        height: 200%;
+    }
+}
+
+%bwt{
+    &:before{
+        border-top: j(1) solid #ddd;
+    }
+}
+
+%bwr{
+    &:before{
+        border-right: j(1) solid #ddd;
+    }
+}
+
+%bwb{
+    &:before{
+        border-bottom: j(1) solid #ddd;
+    }
+}
+
+%bwl{
+    &:before{
+        border-left: j(1) solid #ddd;
+    }
+}
+
+@mixin bw05r($px){
+    &:before{
+        border-radius: $px;
+    }
+}
+
+%bw05r{
+    &:before{
+        border-radius: 50%;
+    }
+}
+
+

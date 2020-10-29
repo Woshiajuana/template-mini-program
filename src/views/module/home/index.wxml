@@ -1,0 +1,10 @@
+
+<view>
+    <text>分包 HOME - 1</text>
+</view>
+
+<button bindtap="handleTest">测试按钮1</button>
+<button bindtap="handleTest">测试按钮</button>
+
+<template-component></template-component>
+<module-component></module-component>

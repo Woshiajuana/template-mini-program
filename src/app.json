@@ -3,15 +3,24 @@
         "pages/home/index",
         "pages/login/index"
     ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#11b9ea",
-        "navigationBarTitleText": "wow-wechart",
-        "navigationBarTextStyle": "white"
-    },
     "permission": {
         "scope.userLocation": {
             "desc": "你的位置信息将用于小程序位置接口的效果展示"
         }
-    }
+    },
+    "window": {
+        "navigationBarTitleText": "WOW-WX",
+        "navigationBarTextStyle": "black",
+        "navigationBarBackgroundColor": "#ffffff"
+    },
+    "subpackages": [
+        {
+            "root": "module",
+            "name": "module",
+            "pages": [
+                "home/index",
+                "login/index"
+            ]
+        }
+    ]
 }

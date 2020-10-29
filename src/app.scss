@@ -1,17 +1,78 @@
-@import './assets/scss/define';
 
-.wrap{
-    &.list-page{
-        @extend %df;
-        @extend %df1;
-        @extend %fdc;
-        @extend %h100;
-        .main{
-            @extend %df1;
-            @extend %oh;
-            margin: j(30) j(30) 0;
-            background-color: #fff;
-        }
+@import "~src/assets/scss/define";
+@import "~src/assets/scss/iconfont";
+
+page{
+    @extend %pr;
+    background-color: $color-bg;
+    min-height: 100%;
+    &:before{
+        @extend %pf;
+        @extend %w100;
+        @extend %t0;
+        @extend %l0;
+        @extend %r0;
+        @include tft(scale(0.5, 0.5));
+        @include tfo(0, 0);
+        height: j(1);
+        background-color: #ddd;
+        width: 200%;
+        z-index: 1;
+        content: '';
     }
 }
 
+.s-wiper-page{
+    @extend %df;
+    @extend %fdc;
+    @extend %h100;
+}
+.s-wiper-box{
+    @extend %df1;
+    height: j(100);
+}
+.s-wiper-item{
+    @extend %h100;
+}
+
+.c-border{
+    @extend %bw05;
+    @extend %bwb;
+    &.mr{
+        margin: 0 j(20);
+    }
+}
+.c-bar{
+    @extend %bw05;
+    @extend %w100;
+    height: j(10);
+    &.bg1{
+        background-color: $color-bg;
+    }
+    &.bg{
+        background-color: #fff;
+    }
+    &.bt{
+        @extend %bwt;
+    }
+    &.bb{
+        @extend %bwb;
+    }
+}
+.c-flex1{
+    @extend %df1;
+}
+.c-null{
+    height: j(40);
+}
+.c-button-normal{
+    @extend %bsb;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background-color: #fff;
+    &:after{
+        @extend %dn;
+        border: none;
+    }
+}

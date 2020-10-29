@@ -1,4 +1,9 @@
 
-import Router                       from 'config/router.config'
+import routes from 'src/config/router.config'
 
-export const RouterConfig = Router;
+export default {
+    routes,
+    modalFormatMsg (options) {
+        return options.errMsg || options.msg || options.message || JSON.stringify(options);
+    },
+}

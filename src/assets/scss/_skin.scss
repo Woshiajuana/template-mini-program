@@ -1,0 +1,19 @@
+
+@function f($px) {
+    @return $px * 2rpx;
+}
+
+// 主题色
+$color-main: #B12C2C;
+
+// 背景色
+$color-bg: #f3f4f5;
+
+// 同一 padding
+$num-padding: f(20);
+
+$num-margin: f(20);
+
+
+// wow-cell
+$cell-padding: f(20)

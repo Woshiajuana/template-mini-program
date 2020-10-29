@@ -1,0 +1,10 @@
+
+<view>
+    <text>主包 HOME - 1</text>
+</view>
+
+<button bindtap="jumpPageOrFireFn" data-url="login_index" data-params="{{ {x: 1} }}">跳转到登录页面</button>
+<button bindtap="jumpPageOrFireFn" data-url="module_home_index" data-params="{{ {x: 1} }}">跳转到分包主页页面</button>
+<button bindtap="jumpPageOrFireFn" data-url="module_login_index" data-params="{{ {x: 1} }}">跳转到分包登录页面</button>
+
+<template-component></template-component>

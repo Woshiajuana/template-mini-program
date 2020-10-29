@@ -1,0 +1,84 @@
+@import '~src/assets/scss/define';
+
+page{
+    background-color: #fff;
+    &:before{
+        @extend %dn;
+    }
+}
+.bg-image{
+    @extend %w100;
+    @extend %db;
+    height: auto;
+}
+.logo{
+    @extend %db;
+    width: j(100);
+    height: j(100);
+    margin: j(-75) auto 0;
+}
+.title{
+    @extend %c3;
+    @extend %tac;
+    line-height: j(25);
+    font-size: j(18);
+    margin: j(16) auto 0;
+}
+.sub-title{
+    @extend %c9;
+    @extend %tac;
+    margin: j(4) auto;
+    line-height: j(20);
+    font-size: j(14);
+}
+.prompt{
+    @extend %c3;
+    padding: 0 j(20);
+    margin-top: j(80);
+    line-height: j(17);
+    font-size: j(12);
+}
+.tip{
+    @extend %df;
+    @extend %aic;
+    @extend %c9;
+    line-height: j(17);
+    font-size: j(12);
+    padding: 0 j(20);
+    margin-top: j(8);
+}
+.dot{
+    @extend %br50;
+    width: j(10);
+    height: j(10);
+    margin-right: j(4);
+    background-color: #999;
+}
+.operate{
+    @extend %df;
+    @extend %aic;
+    @extend %jcs;
+    padding: j(30) j(20);
+}
+.operate-button{
+    @extend %df;
+    @extend %aic;
+    @extend %cp;
+    @extend %jcc;
+    @extend %cp;
+    @extend %cfff;
+    font-size: j(16);
+    border: none;
+    width: j(160);
+    height: j(44);
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #9CC3C5;
+    &:after{
+        border: none;
+    }
+    &.sure{
+        background-color: $color-main;
+    }
+}
