@@ -1,5 +1,5 @@
 {
-  "name": "wx-garden",
+  "name": "template-wechat",
   "version": "1.0.0",
   "description": "webpack building multiple page projects",
   "main": "index.js",
