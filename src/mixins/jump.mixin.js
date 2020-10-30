@@ -1,6 +1,6 @@
 
-import InputMixin from 'source/mixins/wx/input.mixin'
-import RouterMixin from 'source/mixins/wx/router.mixin'
+import InputMixin from 'wow-wx/mixins/wx/input.mixin'
+import RouterMixin from 'wow-wx/mixins/wx/router.mixin'
 
 export default {
     mixins: [

@@ -1,7 +1,7 @@
 
-import Curl from 'source/curl'
-import Loading from 'source/mixins/wx/loading.mixin'
-import User from 'source/mixins/utils/user.mixin'
+import Curl from 'wow-wx/curl'
+import Loading from 'wow-wx/mixins/wx/loading.mixin'
+import User from 'wow-wx/mixins/utils/user.mixin'
 import EnvConfig from 'src/config/env.config'
 import ApiConfig from 'src/config/api.config'
 

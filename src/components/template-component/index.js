@@ -2,7 +2,7 @@ import './index.json'
 import './index.wxml'
 import './index.scss'
 
-import WowComponent from 'source/lib/component'
+import WowComponent from 'wow-wx/lib/component'
 
 new WowComponent({
     mixins: [
